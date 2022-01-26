@@ -96,6 +96,18 @@ if __name__ == '__main__':
 
         parsed_data.update(json_data)  # Merge into one dictionary
 
+    """
+    parsed_data structure example:
+    { user_id1: {
+        item_id1: [[request_time1, request_time2], variant1],
+        item_id2: [[request_time3], variant2]
+        },
+      user_id2: {
+        item_id3: [[request_time4], variant3]
+        }
+    }
+    """
+
     # Print out results
     # 1. count number of unique users in one day
     num_unique_users = len(parsed_data)
