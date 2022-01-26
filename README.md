@@ -88,20 +88,18 @@ __Note__: Do not include the contents of the `data` directory in your solution, 
 1. You are given a dataset of RGB images of shoes. Describe a procedure that would sort the shoes into groups by colors, possibly using some machine learning algorithm. Discuss the advantages/disadvantages of your solutions. Use less than 100 words, please.   
 
 Solution:
-```
+
 Since we are dealing with images, I would use a Convolutional Neural Network. I would not design one from scratch, but instead use an existing architecture such as GoogleNet. 
 To train the CNN, I find dataset of shoes with annotated colors. If there isn't one, I would have to create one myself, either manually or using other model.
 Depending on size of the model architecture and training dataset, the resulting CNN might take a long time to train. 
 If we don't provide large enough training dataset, the model will not produce accurate results.
 We can reduce training time by fine-tuning existing model that does similar task.
-```
 
 2. You are given a previously unseen image of a shoe. Design an algorithm that would retrieve 10 most similar shoes from your dataset. Use less than 100 words, please.
 
 Solution:
-```
+
 We can use one of the algorithm for unsupervised learning. 
 We can use K nearest neighbours algorithm to find 10 most similar images. However, we would need to define how is similarity between images calculated.
 We would need to keep copy of entire dataset. Each image in dataset would compute its difference from other images. 
 Once all the similarities are computed, we would just pick the 10 most similar - the 10 nearest neighbours.
-```
